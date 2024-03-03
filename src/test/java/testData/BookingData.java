@@ -1,41 +1,67 @@
 package testData;
 
-import com.github.javafaker.Faker;
-import org.json.simple.JSONObject;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.concurrent.TimeUnit;
-
 public class BookingData {
+    private String firstName ;
+    private String lastName;
+    private int totalPrice;
+    private boolean depositPaid;
+    private String checkIn;
+    private String checkOut;
+    private String additionalNeeds;
 
-    // set fake data
-    private static Faker faker = new Faker();
-    private static SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+    public String getFirstName() {
+        return firstName;
+    }
 
-    public static String firstName = faker.name().firstName();
-    public static String lastName = faker.name().lastName();
-    public static int totalPrice = faker.number().numberBetween(100, 5000);
-    public static boolean depositPaid = true;
-    public static String checkIn = df.format(faker.date().past(5, TimeUnit.DAYS));
-    public static String checkOut = df.format(faker.date().future(60, 30, TimeUnit.DAYS));
-    public static String additionalNeeds = "breakfast";
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-    public static String getBookingData() {
-        JSONObject bookingdates = new JSONObject();
-        JSONObject jsonObj = new JSONObject();
+    public String getLastName() {
+        return lastName;
+    }
 
-        // nested JSON
-        bookingdates.put("checkin", checkIn);
-        bookingdates.put("checkout", checkOut);
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-        jsonObj.put("firstname", firstName);
-        jsonObj.put("lastname", lastName);
-        jsonObj.put("totalprice", totalPrice);
-        jsonObj.put("depositpaid", depositPaid);
-        jsonObj.put("bookingdates", bookingdates);
-        jsonObj.put("additionalneeds", additionalNeeds);
+    public int getTotalPrice() {
+        return totalPrice;
+    }
 
-        return jsonObj.toString();
+    public void setTotalPrice(int totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
+    public boolean isDepositPaid() {
+        return depositPaid;
+    }
+
+    public void setDepositPaid(boolean depositPaid) {
+        this.depositPaid = depositPaid;
+    }
+
+    public String getCheckIn() {
+        return checkIn;
+    }
+
+    public void setCheckIn(String checkIn) {
+        this.checkIn = checkIn;
+    }
+
+    public String getCheckOut() {
+        return checkOut;
+    }
+
+    public void setCheckOut(String checkOut) {
+        this.checkOut = checkOut;
+    }
+
+    public String getAdditionalNeeds() {
+        return additionalNeeds;
+    }
+
+    public void setAdditionalNeeds(String additionalNeeds) {
+        this.additionalNeeds = additionalNeeds;
     }
 }
