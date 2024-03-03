@@ -148,4 +148,21 @@ public class E2ETest {
                 .statusCode(201);
 
     }
+
+    @Test(priority = 4)
+    @Description("Verifying that booking was deleted")
+    @Severity(SeverityLevel.NORMAL)
+    @Step("Verify that deleted booking is no longer exist")
+    public void verifyDeletedBooking() {
+
+        given(reqSpec)
+                .when()
+                .get(String.format("/booking/%d", id))
+                .then()
+                .assertThat()
+                .statusCode(404)
+                .and()
+                .body(equalTo("Not Found"));
+
+    }
 }
