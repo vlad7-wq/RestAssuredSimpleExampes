@@ -1,4 +1,4 @@
-package testData;
+package restful_test_data;
 
 import io.restassured.specification.RequestSpecification;
 import org.json.simple.JSONObject;

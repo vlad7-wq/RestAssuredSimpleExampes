@@ -4,14 +4,13 @@ import io.qameta.allure.*;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import testData.Auth;
-import testData.BookingData;
-import testData.BookingDataProvider;
-import testData.PartialBookingData;
+import restful_test_data.Auth;
+import restful_test_data.BookingData;
+import restful_test_data.BookingDataProvider;
+import restful_test_data.PartialBookingData;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
-
 
 @Feature("Creating E2E test example")
 public class E2ETest {

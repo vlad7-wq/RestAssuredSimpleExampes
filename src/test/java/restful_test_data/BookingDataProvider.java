@@ -1,4 +1,4 @@
-package testData;
+package restful_test_data;
 
 import com.github.javafaker.Faker;
 import org.json.simple.JSONObject;

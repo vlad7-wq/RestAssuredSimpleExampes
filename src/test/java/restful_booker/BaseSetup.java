@@ -7,6 +7,7 @@ public class BaseSetup {
 
     public RequestSpecification setup() {
 
+
         RequestSpecification reqSpec = new RequestSpecBuilder()
                 .setBaseUri("https://restful-booker.herokuapp.com")
                 .addHeader("Content-Type", "application/json")

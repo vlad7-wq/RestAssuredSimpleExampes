@@ -1,4 +1,4 @@
-package testData;
+package restful_test_data;
 
 public class BookingData {
     private String firstName ;
