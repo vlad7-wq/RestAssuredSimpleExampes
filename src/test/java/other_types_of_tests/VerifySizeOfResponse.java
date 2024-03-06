@@ -1,4 +1,4 @@
-package list_of_data_example;
+package other_types_of_tests;
 
 import io.qameta.allure.Description;
 import io.restassured.RestAssured;
@@ -13,11 +13,7 @@ import static org.hamcrest.Matchers.*;
 public class VerifySizeOfResponse {
 
     @BeforeTest
-    public void setup() {
-
-        RestAssured.baseURI = "https://reqres.in";
-
-    }
+    public void setup() { RestAssured.baseURI = "https://reqres.in"; }
 
     @Test
     @Description("Verify size of the response")
@@ -29,7 +25,6 @@ public class VerifySizeOfResponse {
                 .then()
                 .assertThat()
                 .statusCode(200);
-
 
         JsonPath jsonPath = new JsonPath(resp.extract().body().asString());
 
