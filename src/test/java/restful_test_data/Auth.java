@@ -2,7 +2,7 @@ package restful_test_data;
 
 import io.restassured.specification.RequestSpecification;
 import org.json.simple.JSONObject;
-import restful_booker.BaseSetup;
+import restful_booker_e2e_test.BaseSetup;
 
 import static io.restassured.RestAssured.given;
 

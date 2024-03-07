@@ -9,14 +9,14 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
-public class FindPropertyInResponse {
+public class FindItemInResponse {
 
     @BeforeTest
     public void setup() { RestAssured.baseURI = "https://jsonplaceholder.typicode.com"; }
 
     @Test
-    @Description("Verify that specific property is present in response")
-    public void findPropertyByTitle() {
+    @Description("Verify that specific item is present in response")
+    public void findItemByTitle() {
 
         var resp = given()
                 .when()

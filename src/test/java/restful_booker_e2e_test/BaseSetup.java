@@ -1,4 +1,4 @@
-package restful_booker;
+package restful_booker_e2e_test;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
